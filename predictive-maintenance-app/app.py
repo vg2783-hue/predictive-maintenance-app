@@ -21,7 +21,7 @@ st.write(
 
 @st.cache_resource
 def load_model_bundle():
-    with open("predictive_maintenance_model.pkl", "rb") as file:
+    with open(Path(__file__).parent / "predictive_maintenance_model.pkl", "rb") as file:
         return pickle.load(file)
 
 
